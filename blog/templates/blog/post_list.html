@@ -8,6 +8,14 @@
             <p>I was diagnosed with diabetes when I was 9. I've struggled to control my blood sugar levels, which are extremely unpredictable, my entire life. I don't know why it took me so long to realize how beneficial, and truely crucial, a low carb diet is to my overall health.</p>
             <p>Cooking has always been a passion of mine. I remember watching Food Network as a youngin, and being excited to get home from school to see what the chefs had to teach me. Food doesn't have to just be life sustaining, it can be truely overwhelming and inspiring! I'm learning recipes every day, so come along with me on the journey to a healthy and delicious life!</p>
         <h2>Blog Posts</h2>
+            <div>{% for post in posts %}
+                <div>
+                    <p>published: {{ post.published_date }}</p>
+                    <h1><a href="">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
+            </div>
         <h2>Helpful Keto Resources</h2>
     </body>
 </html>
